@@ -10,48 +10,48 @@ export const Footer = () => {
       }}
     >
       <div className="container">
-        <div className="row gy-3">
-          <div className="col-12 col-md-3">
+        <div className="row gy-3 align-items-center">
+          <div className="col-12 col-md-4 text-center text-md-start mb-2 mb-md-0">
             <h5 className="text-warning">
               <strong>GhibliApp</strong>
             </h5>
-            <p className="small">
+            <p className="small mb-0">
               Página de información sobre el popular estudio de animación
               Ghibli, con el fin de dar visibilidad a sus obras.
             </p>
           </div>
-          <div className="col-12 col-md-3">
+          <div className="col-12 col-md-4 text-center mb-2 mb-md-0">
             <h5 className="text-warning">Enlaces</h5>
-            <ul className="list-unstyled">
-              <NavLink className="nav-link text-light" to="/home">
-                Home
-              </NavLink>
-              <NavLink className="nav-link text-light" to="/peliculas">
-                Películas
-              </NavLink>
-              <NavLink className="nav-link text-light" to="/creador">
-                Acerca de los creadores
-              </NavLink>
-            </ul>
-          </div>
-          <div className="col-12 col-md-3">
-            <h5 className="text-warning">Contacto</h5>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled mb-0">
               <li>
-                <a href="mailto:info@ghibliapp.com" className="text-light">
-                  hector@gmail.com
-                </a>
+                <NavLink
+                  className="nav-link text-light d-inline-block"
+                  to="/home"
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a href="tel:+1234567890" className="text-light">
-                  +53 590076413
-                </a>
+                <NavLink
+                  className="nav-link text-light d-inline-block"
+                  to="/peliculas"
+                >
+                  Películas
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="nav-link text-light d-inline-block"
+                  to="/creador"
+                >
+                  Acerca de los creadores
+                </NavLink>
               </li>
             </ul>
           </div>
-          <div className="col-12 col-md-3 d-flex align-items-center">
+          <div className="col-12 col-md-4 text-center text-md-end">
             <p className="mb-0 small">
-              © 2024 <span className="text-warning">GhibliApp</span>. Todos los
+              © 2025 <span className="text-warning">GhibliApp</span>. Todos los
               derechos reservados.
             </p>
           </div>
