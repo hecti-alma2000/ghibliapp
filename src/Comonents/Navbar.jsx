@@ -1,10 +1,25 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../stylesheet/navLink.css";
 
 export const Navbar = () => {
   const navegate = useNavigate();
+  const location = useLocation();
+  const offcanvasRef = useRef(null);
+
+  // Cierra el offcanvas automáticamente al cambiar de ruta
+  useEffect(() => {
+    if (offcanvasRef.current) {
+      const offcanvasEl = offcanvasRef.current;
+      if (window.bootstrap && window.bootstrap.Offcanvas) {
+        const bsOffcanvas =
+          window.bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+        bsOffcanvas.hide();
+      }
+    }
+  }, [location]);
 
   const manejarClick = () => {
     navegate("/");
@@ -32,6 +47,7 @@ export const Navbar = () => {
           tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
+          ref={offcanvasRef}
         >
           <div className="offcanvas-header">
             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
