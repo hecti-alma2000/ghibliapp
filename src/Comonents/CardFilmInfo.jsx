@@ -12,7 +12,9 @@ export const CardFilmInfo = () => {
     return <Navigate to="/peliculas" />;
   }
 
-  const imgPath = `/src/assets/${film.img}`;
+  const imgPath = `/assets/${film.img
+    .replace(/ /g, "_")
+    .replace(/([A-Z])/g, (m) => m.toLowerCase())}`;
   return (
     <div className="d-flex justify-content-center w-100">
       <div

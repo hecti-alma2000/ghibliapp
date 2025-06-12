@@ -15,7 +15,7 @@ export const Navbar = () => {
       style={{ minHeight: "70px", zIndex: 100 }}
     >
       <div className="container-fluid">
-        <NavLink className="navbar-brand fw-bold fs-3" to="/home">
+        <NavLink className="navbar-brand fw-bold fs-3" to="/">
           GhibliApp
         </NavLink>
         <button
@@ -47,29 +47,17 @@ export const Navbar = () => {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 gap-2">
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/home"
-                  data-bs-dismiss="offcanvas"
-                >
+                <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/peliculas"
-                  data-bs-dismiss="offcanvas"
-                >
+                <NavLink className="nav-link" to="/peliculas">
                   Películas
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  to="/creador"
-                  data-bs-dismiss="offcanvas"
-                >
+                <NavLink className="nav-link" to="/creador">
                   Acerca de los creadores
                 </NavLink>
               </li>

@@ -6,7 +6,7 @@ export const CreadoresCard = ({
   estiloTema,
   img,
 }) => {
-  const pathImg = `src/assets/creadores/${img}.jpg`;
+  const pathImg = `/assets/creadores/${img.toLowerCase()}.jpg`;
   return (
     <div className="container">
       <div
