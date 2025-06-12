@@ -1,0 +1,12 @@
+.desactivada {
+    position: absolute;
+    background-color: #09f;
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+    left: -15;
+    top: -15;
+    width: 30;
+    height: 30; 
+    transform: translate(0px, 0px) !important; 
+}
